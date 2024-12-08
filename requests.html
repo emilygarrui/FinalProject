@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ELLA MAI</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/requeststyle.css">
 </head>
 
 <body>
@@ -26,48 +27,20 @@
   </header>
 
   <main>
-    <div id="parallax">
-      <div class="parallax-content">
-      </div>
-    </div>
-
-    <div class="scroll-watcher"></div>
-
-    <section id="albums">
-      <h2>Últimos Álbumes</h2>
-      <div class="album">
-        <div class="album-cover">
-          <img src="img/ellamai-3ep.jpg" alt="3-EP">
+    <section id="requests-section">
+      <div id="requests-container">
+        <div class="container">
+          <h2>Solicitudes para el Tour</h2>
+          <p>Estas son las posibles ciudades para el Tour 2025 de Ella Mai:</p>
+          <div class="data-container">
+            <p class="data-item"><strong>CIUDAD:</strong></p>
+            <p class="data-value" id="city"></p>
+            <p class="data-item"><strong>EMAIL:</strong></p>
+            <p class="data-value" id="email"></p>
+            <p class="data-item"><strong>COMENTARIOS:</strong></p>
+            <p class="data-value" id="message"></p>
+          </div>
         </div>
-        <div class="album-info">
-          <h3>3</h3>
-        </div>
-      </div>
-      <div class="album">
-        <div class="album-cover">
-          <img src="img/ellamai-homs-deluxe.jpg" alt="Heart-On-My-Sleeve-Deluxe">
-        </div>
-        <div class="album-info">
-          <h3>Heart On My Sleeve - Deluxe</h3>
-        </div>
-      </div>
-
-      <div class="album">
-        <div class="album-cover">
-          <img src="img/ellamai-homs.jpg" alt="Heart-On-My-Sleeve">
-        </div>
-        <div class="album-info">
-          <h3>Heart On My Sleeve</h3>
-        </div>
-      </div>
-    </section>
-
-    <section id="latest-song">
-      <h2>Última Canción Añadida</h2>
-      <div class="song-details">
-        <a href="https://www.youtube.com/watch?v=bbw4-yOszDc" class="song-cover" target="_blank">
-          <img src="img/ellamai-littlethings.jpg" alt="Little-Things">
-        </a>
       </div>
     </section>
   </main>
@@ -100,6 +73,7 @@
     </div>
   </footer>
 
+  <script src="js/request.js"></script>
   <script src="https://kit.fontawesome.com/60fac8e4fe.js" crossorigin="anonymous"></script>
 </body>
 

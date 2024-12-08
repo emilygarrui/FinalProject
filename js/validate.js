@@ -1,42 +1,46 @@
 function listenForValidation() {
-	const PERSONAL_DATA_FORM = document.getElementById("personal-data-form");
-	PERSONAL_DATA_FORM.addEventListener("submit", validatePersonalDataForm);
+    const TOUR_FORM = document.getElementById("tour-form");
+    TOUR_FORM.addEventListener("submit", validateTourForm);
 }
 
-function validatePersonalDataForm(e) {
+function validateTourForm(e) {
+    const CITY = e.target.city.value;
+    const EMAIL = e.target.email.value;
+    const MESSAGE = e.target.message.value;
 
-	const NAME = e.target.name.value;
-	const SONG_ARTIST = e.target["song-artist"].value;
-	const URL_SONG = e.target["url-song"].value;
+    let valid = true;
 
-	let valid = true;
+    if (!CITY) {
+        document.getElementById("form-city").style.visibility = "visible";
+        valid = false; 
+    } else {
+        document.getElementById("form-city").style.visibility = "hidden";
+    }
 
-	if (!NAME) {
-		document.getElementById("form-name").style.visibility = "visible";
-		valid = false;
-	} else document.getElementById("form-name").style.visibility = "hidden";
+    if (!EMAIL) {
+        document.getElementById("form-email").style.visibility = "visible";
+        valid = false;
+    } else {
+        document.getElementById("form-email").style.visibility = "hidden";
+    }
 
-	if (!SONG_ARTIST) {
-		document.getElementById("form-song-artist").style.visibility = "visible";
-		valid = false;
-	} else document.getElementById("form-song-artist").style.visibility = "hidden";
+    if (!MESSAGE) {
+        document.getElementById("form-message").style.visibility = "visible";
+        valid = false;
+    } else {
+        document.getElementById("form-message").style.visibility = "hidden";
+    }
 
-	if (!URL_SONG) {
-		document.getElementById("form-url-song").style.visibility = "visible";
-		valid = false;
-	} else document.getElementById("form-url-song").style.visibility = "hidden";
-
-	if (!valid) {
-		e.preventDefault();
-	} else {
-		saveData(NAME, SONG_ARTIST, URL_SONG);
-	}
+    if (!valid) {
+        e.preventDefault();
+    } else {
+        saveData(CITY, EMAIL, MESSAGE);
+    }
 }
 
-function saveData(name, songArtist, urlSong) {
-	localStorage.setItem("name", name);
-	localStorage.setItem("song-artist", songArtist);
-	localStorage.setItem("url-song", urlSong);
+function saveData(city, email, message) {
+    localStorage.setItem("city", city);
+    localStorage.setItem("email", email);
+    localStorage.setItem("message", message);
 }
-
 listenForValidation();
