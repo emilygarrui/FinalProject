@@ -11,4 +11,6 @@ Emily García Ruiz.
 
 ## Acknowledgments
 
-  - Alberto DLR for his help in this project with some ideas.
+- **Alberto DLR**: Thank you for your support and contributions.
+- **My classmates**: I appreciate the collaboration and great learning environment.
+- **The Internet**: For being an endless source of resources, knowledge, and tools that made this project possible.
